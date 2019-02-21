@@ -1,0 +1,6 @@
+* text=auto
+
+demo.html linguist-vendored
+font/ linguist-vendored
+dist/ linguist-generated
+
