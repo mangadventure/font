@@ -16,7 +16,7 @@ $codes: (
   'info-circle': 'f10f',
   'reply': 'f110',
   'lock': 'f111',
-  'warning': 'f112',
+  'alert': 'f112',
   'twitter': 'f113',
   'facebook': 'f114',
   'google': 'f115',
@@ -48,7 +48,10 @@ $codes: (
   'rewind': 'f12f',
   'forward': 'f130',
   'reddit': 'f131',
+  'group': 'f132',
+  'login': 'f133',
+  'logout': 'f134',
 );
 
-$range: 'u+f101-f131';
+$range: 'u+f101-f134';
 
