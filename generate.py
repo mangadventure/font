@@ -1,13 +1,14 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-from os.path import abspath, dirname, join
-from sass import compile as sassc
+from pathlib import Path
 from re import search
 
-path = dirname(abspath(__file__))
+from sass import compile as sassc
+
+path = Path(__file__).resolve().parent
 pattern = r"^[.]mi-([\w-]+):before.*'\\([0-9a-f]+)'"
-css = open(join(path, 'css', 'mangadventure-codes.css'), 'r')
-scss = open(join(path, 'src', '_codes.scss'), 'w')
+css = open(path / 'css' / 'mangadventure-codes.css', 'r')
+scss = open(path / 'src' / '_codes.scss', 'w')
 font_range = None
 
 css.readline()  # Skip blank line
@@ -23,8 +24,4 @@ scss.write(");\n\n$range: 'u+f101-%s';\n\n" % font_range)
 css.close()
 scss.close()
 
-sassc(
-    dirname=(join(path, 'src'), join(path, 'dist')),
-    output_style='compressed'
-)
-
+sassc(dirname=(path / 'src', path / 'dist'), output_style='compressed')

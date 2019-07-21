@@ -5,4 +5,3 @@ config.json linguist-generated
 font/* linguist-vendored
 dist/* linguist-generated
 icons/* linguist-detectable=true
-
