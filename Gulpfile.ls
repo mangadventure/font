@@ -16,7 +16,7 @@ gulp.task \fontello:import (done) !->
 
 gulp.task \fontello:download ->
   gulp.src \config.json
-    .pipe gulpFontello assetsOnly: false
+    .pipe gulp-fontello assetsOnly: false
     .pipe gulp.dest __dirname
 
 gulp.task \dist:transform (done) ->

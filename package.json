@@ -1,5 +1,5 @@
 {
-  "name": "mangadventure.font",
+  "name": "@mangadventure/font",
   "version": "0.1.0",
   "description": "MangAdventure icon font",
   "repository": "git+https://github.com/mangadventure/font.git",
@@ -22,5 +22,8 @@
   },
   "resolutions": {
     "graceful-fs": "^4.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
