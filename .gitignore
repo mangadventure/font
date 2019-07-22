@@ -4,5 +4,11 @@ __pycache__/
 .venv/
 .env/
 
+### Node.js ###
+node_modules/
+package-lock.json
+yarn-error.log
+yarn.lock
+
 # we're using our own
 css/

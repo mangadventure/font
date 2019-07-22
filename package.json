@@ -1,0 +1,26 @@
+{
+  "name": "mangadventure.font",
+  "version": "0.1.0",
+  "description": "MangAdventure icon font",
+  "repository": "git+https://github.com/mangadventure/font.git",
+  "author": "MangAdventure",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "files": [
+    "dist/",
+    "font/"
+  ],
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-fontello": "^0.5.1",
+    "gulp-fontello-import": "^0.0.1",
+    "gulp-sass": "^4.0.2",
+    "livescript": "^1.6.0",
+    "node-sass": "^4.12.0"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.0.0"
+  }
+}
