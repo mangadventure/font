@@ -7,7 +7,7 @@ from sass import compile as sassc
 
 path = Path(__file__).resolve().parent
 pattern = r"^[.]mi-([\w-]+):before.*'\\([0-9a-f]+)'"
-css = open(path / 'css' / 'mangadventure-codes.css', 'r')
+css = open(path / 'css' / 'mangadventure-codes.css', 'r', encoding='utf-8')
 scss = open(path / 'src' / '_codes.scss', 'w')
 font_range = None
 

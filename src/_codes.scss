@@ -64,7 +64,13 @@ $codes: (
   'thumbs-down': 'f140',
   'unlink': 'f141',
   'image': 'f142',
+  'bold': 'f143',
+  'italics': 'f144',
+  'underline': 'f145',
+  'strikethrough': 'f146',
+  'unsortedlist': 'f147',
+  'orderedlist': 'f148',
 );
 
-$range: 'u+f101-f142';
+$range: 'u+f101-f148';
 
