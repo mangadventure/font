@@ -4,8 +4,7 @@ require! {
   gulp,
   \gulp-sass,
   \gulp-fontello,
-  \gulp-fontello-import,
-  os: {EOL: N}
+  \gulp-fontello-import
 }
 
 gulp.task \fontello:import (done) !->
@@ -26,11 +25,11 @@ gulp.task \dist:transform (done) ->
   .on \line !->
     m = it.match /^\.mi-([\w-]+):before.*'\\([0-9a-f]+)'.*/
     @output.write if m is null
-      then "$codes: (#N"
-      else "  '#{m.1}': '#{m.2}',#N"
+      then "$codes: (\n"
+      else "  '#{m.1}': '#{m.2}',\n"
     global.range = m?.2
   .on \close !->
-    @output.write ");#N#N\$range: 'u+f101-#range';#N"
+    @output.write ");\n\n\$range: 'u+f101-#range';\n"
     done!
 
 gulp.task \dist:compile ->
