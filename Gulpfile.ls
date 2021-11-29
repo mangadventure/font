@@ -2,7 +2,7 @@ require! {
   fs,
   readline,
   gulp,
-  \gulp-sass,
+  \gulp-stylus,
   \gulp-fontello,
   \gulp-fontello-import
 }
@@ -21,23 +21,20 @@ gulp.task \fontello:download ->
 gulp.task \dist:transform (done) ->
   readline.createInterface do
     input: fs.createReadStream \css/mangadventure-codes.css
-    output: fs.createWriteStream \src/_codes.scss
+    output: fs.createWriteStream \src/codes.styl
   .on \line !->
     m = it.match /^\.mi-([\w-]+):before.*'\\([0-9a-f]+)'.*/
     @output.write if m is null
-      then "$codes: (\n"
-      else "  '#{m.1}': '#{m.2}',\n"
+      then "codes = {\n"
+      else "  #{m.1}: #{m.2},\n"
     global.range = m?.2
   .on \close !->
-    @output.write ");\n\n\$range: 'u+f101-#range';\n"
+    @output.write "}\n\nrange = \"u+f101-#range\"\n"
     done!
 
 gulp.task \dist:compile ->
-  gulp.src \src/mangadventure.scss
-    .pipe gulp-sass(
-      outputStyle: \compressed
-      compiler: require \node-sass
-    ).on \error gulp-sass.logError
+  gulp.src \src/mangadventure.styl
+    .pipe gulp-stylus compress: true
     .pipe gulp.dest \dist
 
 gulp.task \fontello gulp.series <[fontello:import fontello:download]>

@@ -1,0 +1,43 @@
+@import 'codes'
+
+vendors = official
+
+font(ext)
+  fmt = ext == "ttf" ? "truetype" : ext
+  url(../font/mangadventure. + ext) format(fmt)
+
+@keyframes spin
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(359deg) }
+
+@font-face
+  unicode-range range
+  font-family "mangadventure"
+  font-weight normal
+  font-style normal
+  font-display block
+  src font("woff2"), font("woff"), font("ttf")
+
+.mi
+  font-family "mangadventure"
+  font-style normal
+  font-weight normal
+  font-size 1em
+  font-variant normal
+  text-decoration inherit
+  text-transform none
+  text-align center
+  line-height 1em
+  display inline-block
+  margin-right 0.2em
+  width 1em
+  speak none
+
+  &-spin
+    margin-left 0.2em
+    display inline-block
+    animation spin 2s infinite linear
+
+  for name, code in codes
+    &-{name}::before
+      content: '"\%s"' % code

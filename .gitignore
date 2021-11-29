@@ -13,3 +13,7 @@ yarn.lock
 
 # we're using our own
 css/
+
+# we don't need these
+font/mangadventure.eot
+font/mangadventure.svg
