@@ -1,6 +1,6 @@
 {
   "name": "@mangadventure/font",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "MangAdventure icon font",
   "repository": "mangadventure/font",
   "author": "MangAdventure",
@@ -16,16 +16,16 @@
     "gulp": "^4.0.2",
     "gulp-fontello": "^0.5.2",
     "gulp-fontello-import":
-      "cocos-creator/gulp-fontello-import#pull/6/head",
-    "gulp-stylus": "^2.7.0",
+      "adebree/gulp-fontello-import#4b082f2",
+    "gulp-stylus": "^3.0.0",
     "livescript": "^1.6.0"
   },
   "resolutions": {
-    "chokidar": "^3.5.2",
+    "chokidar": "^3.5.3",
     "css": "^3.0.0",
     "fstream": "^1.0.12",
     "glob-parent": "^6.0.2",
-    "graceful-fs": "^4.2.8",
+    "graceful-fs": "^4.2.10",
     "gulp-error": "npm:plugin-error",
     "lodash": "^4.17.21",
     "needle": "npm:needle-retry-x",
